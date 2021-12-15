@@ -6,7 +6,7 @@ export default function EntryList() {
     const { inputs } = useInputs();
     return (
         <div>
-            <ul style={{listStyle: 'none', border: '1px solid black'}}>
+            <ul aria-label='list' style={{listStyle: 'none', border: '1px solid black'}}>
                 {inputs.map((input) => {
                     return (
                         <div>
