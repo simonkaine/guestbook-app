@@ -1,22 +1,22 @@
 import { useContext, createContext, useState } from "react";
 
-const userContext = createContext();
+const UserContext = createContext();
 const UserProvider = ({children}) => {
 
-    const [user, setUser] = useState([]);
+    const [user, setUser] = useState('');
 
     return (
-        <userContext.Provider value={{user, setUser}}>
+        <UserContext.Provider value={{user, setUser}}>
             {children}
-        </userContext.Provider>
+        </UserContext.Provider>
     )
 }
 
 const useUser = () => {
-    const context = useContext(userContext)
+    const context = useContext(UserContext)
     if(context === undefined) {
-        throw new Error("Yoooo, things ain't working with your user dawg..")
-    } return context
+        throw new Error("Yoooo, things ain't working with your 'user' dawg..")
+    } return context;
 }
 
 export { UserProvider, useUser }

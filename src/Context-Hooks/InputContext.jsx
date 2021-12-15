@@ -1,21 +1,21 @@
 import { useContext, createContext, useState } from "react";
 
-const inputContext = createContext();
+const InputContext = createContext();
 const InputProvider = ({children}) => {
 
-    const [input, setInput] = useState([]);
+    const [inputs, setInputs] = useState([]);
 
     return (
-        <inputContext.Provider value={{input, setInput}}>
+        <InputContext.Provider value={{inputs, setInputs}}>
             {children}
-        </inputContext.Provider>
+        </InputContext.Provider>
     )
 }
 
 const useInputs = () => {
-    const context = useContext(inputContext)
+    const context = useContext(InputContext)
     if(context === undefined) {
-        throw new Error("Yoooo, things ain't working with your inputs dawg..")
+        throw new Error("Yoooo, things ain't working with your 'inputs' dawg..")
     } return context
 }
 
