@@ -1,5 +1,5 @@
 // import React from 'react';
-import { useInputs } from '../../Context-Hooks/InputContext';
+import { useInputs } from '../../Context/InputContext';
 import EntryInput from '../Entry/EntryInput';
 
 export default function EntryList() {

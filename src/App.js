@@ -1,4 +1,6 @@
 import './App.css';
+import { BrowserRouter as Router, Switch } from 'react-router-dom';
+import { ProvideAuth } from './Context/ProvideAuth';
 import Home from './Prensentationals/Home/Home';
 import LayoutDesign from './Prensentationals/Layout-Design/LayoutDesign';
 
@@ -7,9 +9,15 @@ function App() {
   
   return (
     <div className="App">
-    <LayoutDesign>
-      <Home />
-    </LayoutDesign>
+    <ProvideAuth>
+      <Router>
+        <Switch>
+          <LayoutDesign>
+            <Home />
+          </LayoutDesign>
+        </Switch>
+      </Router>
+    </ProvideAuth>
     </div>
   );
 }

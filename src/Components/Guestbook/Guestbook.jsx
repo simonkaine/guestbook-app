@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { useInputs } from '../../Context-Hooks/InputContext';
-import { useUser } from '../../Context-Hooks/UserContext';
+import { useInputs } from '../../Context/InputContext';
+import { useUser } from '../../Context/UserContext';
 
 export default function Guestbook() {
     // create state + name + input text / allow contexts
