@@ -7,5 +7,5 @@ export function useAuth() {
     if(context === undefined) {
         throw new Error('Whoops! UseAuth must be used within a ProvideAuth context!')
     }
-    return context;
+    return context; 
 }
