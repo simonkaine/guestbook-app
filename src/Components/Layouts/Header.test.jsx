@@ -1,7 +1,7 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import Header from './Header'
-import { UserProvider } from '../../Context-Hooks/UserContext'
+import { UserProvider } from '../../Context/UserContext'
 
 it('Should render the header', async () => {
     const {container} = render(
@@ -13,5 +13,5 @@ it('Should render the header', async () => {
     )
     const header = await screen.findByText(/Welcome to Hotel california!/i)
     expect(header).toBeInTheDocument();
-    expect(container).toMatchSnapshot();
+    expect(container).toMatchSnapshot(); 
 })
