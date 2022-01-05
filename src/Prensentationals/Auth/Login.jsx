@@ -1,19 +1,19 @@
 import { useState } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
-import { useAuth } from '../../Hooks/UseAuth';
-import { useForm } from '../../Hooks/UseForm';
+import { useAuth } from '../../Hooks/useAuth';
+import { useForm } from '../../Hooks/useForm';
 
 export default function Login() {
     const history = useHistory();
     const location = useLocation();
     const auth = useAuth();
-    const { formState, handleFormChange } = useForm({username: '', password: ''});
+    const { theFormState, handleFormStateChange } = useForm({username: '', password: ''});
     const [error, setError] = useState(null);
     const { from } = location.state || { from: {pathname: '/'}};
 
     const handleLogin = (e) => {
         e.preventDefault()
-        const loginIsSuccessful = auth.login(formState.username, formState.password);
+        const loginIsSuccessful = auth.login(theFormState.username, theFormState.password);
 
         if (loginIsSuccessful) {
             history.replace(from)
@@ -32,8 +32,8 @@ export default function Login() {
                     id="username"
                     type="text"
                     name="username"
-                    value={formState.username}
-                    onChange={handleFormChange}
+                    value={theFormState.username}
+                    onChange={handleFormStateChange}
                     className="border p-2 m-3"
                     required
                 />
@@ -42,8 +42,8 @@ export default function Login() {
                     id="password"
                     type="password"
                     name="password"
-                    value={formState.password}
-                    onChange={handleFormChange}
+                    value={theFormState.password}
+                    onChange={handleFormStateChange}
                     className="border p-2 m-3"
                     required
                 />
