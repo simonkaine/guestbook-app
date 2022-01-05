@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { useInputs } from '../../Context/InputContext';
 import { useUser } from '../../Context/UserContext';
+import { useHistory } from 'react-router-dom';
+import { useAuth } from '../../Hooks/useAuth';
 
 export default function Guestbook() {
     // create state + name + input text / allow contexts
@@ -8,6 +10,8 @@ export default function Guestbook() {
     const [userMessage, setUserMessage] = useState('');
     const {inputs, setInputs} = useInputs();
     const {user, setUser} = useUser();
+    const history = useHistory();
+    const { signout } = useAuth();
 
     function updateUserName() {
         if(!userMessage) return;
@@ -20,6 +24,10 @@ export default function Guestbook() {
     const submitHandler = (e) => {
         e.preventDefault();
         updateUserName()
+    }
+
+    const handleSignout = () => {
+        signout(() => history.push('/'))
     }
 
     const userNameInput = (
@@ -51,11 +59,8 @@ export default function Guestbook() {
 
                 {user && (
                     <button
-                        type='button' onClick={() => {
-                            setUser('')
-                            setName('')
-                        }}>
-                        Not, {user} ?
+                        type='button' onClick={handleSignout}>
+                        Not, {user}?, Click to Sign out!
                     </button>)}
             </form>
         </section>
