@@ -60,7 +60,7 @@ export default function Guestbook() {
                 {user && (
                     <button
                         type='button' onClick={handleSignout}>
-                        Not, {user}?, Click to Sign out!!!
+                        Not, {user}?, Click to Sign out!
                     </button>)}
             </form>
         </section>
