@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render a user input 1`] = `
+<div>
+  <div>
+    <h1>
+      Simon
+    </h1>
+    <p>
+      I was here!
+    </p>
+  </div>
+</div>
+`;

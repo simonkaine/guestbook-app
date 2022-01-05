@@ -1,23 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
+import Home from './Prensentationals/Home/Home';
+import LayoutDesign from './Prensentationals/Layout-Design/LayoutDesign';
 
 function App() {
+  // need to wrap home with layouts but will only work with context props children passing
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <LayoutDesign>
+      <Home />
+    </LayoutDesign>
     </div>
   );
 }

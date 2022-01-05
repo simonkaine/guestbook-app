@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render the header 1`] = `
+<div>
+  <header>
+    <div
+      style="height: 100px; border: 1px solid black; display: flex; justify-content: flex-end;"
+    >
+      <h1
+        style="margin: 0px 20px 0px 0px;"
+      >
+        Welcome to Hotel california!
+      </h1>
+    </div>
+  </header>
+</div>
+`;

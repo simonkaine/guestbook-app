@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render a list of user entries 1`] = `
+<div>
+  <div>
+    <ul
+      aria-label="list"
+      style="list-style: none; border: 1px solid black;"
+    />
+  </div>
+</div>
+`;
