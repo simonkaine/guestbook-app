@@ -1,5 +1,5 @@
 import { Redirect, Route } from "react-router-dom";
-import { useAuth } from '../../Hooks/useAuth';
+import { useAuth } from '../../Hooks/useAuth.js';
 
 export function PrivateRoute({ children, ...rest }) {
     // eslint-disable-next-line react-hooks/rules-of-hooks

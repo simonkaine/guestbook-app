@@ -13,5 +13,5 @@ it('Should render the header', async () => {
     )
     const header = await screen.findByText(/Welcome to Hotel california!/i)
     expect(header).toBeInTheDocument();
-    expect(container).toMatchSnapshot(); 
+    expect(container).toMatchSnapshot();  
 })

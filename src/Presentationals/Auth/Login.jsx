@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
-import { useAuth } from '../../Hooks/useAuth';
-import { useForm } from '../../Hooks/useForm';
+import { useAuth } from '../../Hooks/useAuth.js';
+import { useForm } from '../../Hooks/useForm.js';
 
 export default function Login() {
     const history = useHistory();

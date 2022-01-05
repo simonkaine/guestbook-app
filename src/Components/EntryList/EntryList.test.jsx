@@ -11,5 +11,5 @@ it('Should render a list of user entries', async() => {
     )
     const list = await screen.findByRole(/list/i)
     expect(list).toBeInTheDocument(); 
-    expect(container).toMatchSnapshot();
+    expect(container).toMatchSnapshot(); 
 }) 

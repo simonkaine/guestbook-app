@@ -13,5 +13,5 @@ it('Should render the footer', async () => {
     )
     const footer = await screen.findByText(/Guestbook lab/i);
     expect(footer).toBeInTheDocument();
-    expect(container).toMatchSnapshot(); 
+    expect(container).toMatchSnapshot();  
 })
