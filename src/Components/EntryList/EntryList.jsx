@@ -1,6 +1,6 @@
 // import React from 'react';
-import { useInputs } from '../../Context/InputContext';
-import EntryInput from '../Entry/EntryInput';
+import { useInputs } from '../../Context/InputContext.jsx';
+import EntryInput from '../Entry/EntryInput.jsx';
 
 export default function EntryList() {
     const { inputs } = useInputs();
