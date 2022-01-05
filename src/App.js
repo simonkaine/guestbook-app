@@ -1,15 +1,33 @@
 import './App.css';
-import Home from './Prensentationals/Home/Home';
-import LayoutDesign from './Prensentationals/Layout-Design/LayoutDesign';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { ProvideAuth } from './Context/ProvideAuth.jsx';
+import { PrivateRoute } from './Components/PrivateRoute/PrivateRoute.jsx';
+import LayoutDesign from './Presentationals/Layout-Design/LayoutDesign.jsx';
+import Login from './Presentationals/Auth/Login.jsx';
+import Home from './Presentationals/Home/Home.jsx';
 
 function App() {
   // need to wrap home with layouts but will only work with context props children passing
   
   return (
     <div className="App">
-    <LayoutDesign>
-      <Home />
-    </LayoutDesign>
+    <ProvideAuth>
+      <Router>
+        <Switch>
+
+          <Route exact path="/login">
+              <Login />
+          </Route>
+          
+          <PrivateRoute exact path='/'>
+            <LayoutDesign>
+              <Home />
+            </LayoutDesign>
+          </PrivateRoute>
+          
+        </Switch>
+      </Router>
+    </ProvideAuth>
     </div>
   );
 }

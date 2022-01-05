@@ -1,5 +1,5 @@
 import React from 'react';
-import { useUser } from '../../Context-Hooks/UserContext';
+import { useUser } from '../../Context/UserContext.jsx';
 
 export default function Header() {
     const { user } = useUser();

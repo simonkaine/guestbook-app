@@ -6,5 +6,5 @@ it('Should render a user input', () => {
     const {container} = render(
         <EntryInput entry={{ name: 'Simon', message: 'I was here!' }}/>
     )
-    expect(container).toMatchSnapshot();
+    expect(container).toMatchSnapshot();  
 })

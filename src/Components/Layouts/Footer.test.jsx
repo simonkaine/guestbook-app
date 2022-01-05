@@ -1,7 +1,7 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import Footer from './Footer'
-import { UserProvider } from '../../Context-Hooks/UserContext'
+import { UserProvider } from '../../Context/UserContext'
 
 it('Should render the footer', async () => {
     const {container} = render(
@@ -13,5 +13,5 @@ it('Should render the footer', async () => {
     )
     const footer = await screen.findByText(/Guestbook lab/i);
     expect(footer).toBeInTheDocument();
-    expect(container).toMatchSnapshot();
+    expect(container).toMatchSnapshot();  
 })
